@@ -1,0 +1,387 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 30%),
+    linear-gradient(180deg, #f5fbf7 0%, #edf4ee 100%);
+  color: #14231d;
+}
+
+.hero-panel,
+.panel,
+.summary-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(20, 35, 29, 0.08);
+  box-shadow: 0 18px 45px rgba(24, 45, 37, 0.08);
+}
+
+.hero-panel {
+  border-radius: 28px;
+  padding: 32px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: minmax(0, 2fr) minmax(250px, 0.9fr);
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+.eyebrow,
+.section-label,
+.hero-note-label {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.74rem;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.hero-panel h1,
+.panel h2,
+.chart-card h3 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.hero-panel h1 {
+  font-size: clamp(2.3rem, 6vw, 4.8rem);
+  line-height: 0.98;
+  max-width: 11ch;
+}
+
+.hero-copy,
+.hero-note p,
+.empty-copy,
+.transaction-meta,
+.summary-meta,
+.chart-empty {
+  color: #496157;
+  line-height: 1.6;
+}
+
+.hero-copy {
+  margin-top: 16px;
+  max-width: 58ch;
+}
+
+.hero-note {
+  border-radius: 20px;
+  background: linear-gradient(180deg, #0f766e 0%, #115e59 100%);
+  color: #ebf9f6;
+  padding: 20px;
+}
+
+.hero-note strong {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+
+.hero-note p,
+.hero-note-label {
+  color: #d4f4ef;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summary-card {
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.summary-card p {
+  margin: 0 0 10px;
+  color: #496157;
+}
+
+.summary-card strong {
+  font-size: 1.5rem;
+}
+
+.summary-card.income {
+  border-top: 5px solid #0f766e;
+}
+
+.summary-card.expense {
+  border-top: 5px solid #f97316;
+}
+
+.summary-card.balance {
+  border-top: 5px solid #2563eb;
+}
+
+.summary-card.neutral {
+  border-top: 5px solid #84cc16;
+}
+
+.summary-meta {
+  grid-column: 1 / -1;
+  margin: 0 4px;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.left-column {
+  display: grid;
+  gap: 24px;
+}
+
+.panel {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.transaction-form,
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.transaction-form label,
+.filters-grid label {
+  display: grid;
+  gap: 8px;
+  font-weight: 600;
+  color: #234338;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+input,
+select,
+button {
+  font: inherit;
+}
+
+input,
+select {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid #c8d6ce;
+  background: #fbfdfc;
+  padding: 12px 14px;
+  color: #14231d;
+}
+
+input:focus,
+select:focus,
+button:focus {
+  outline: 2px solid rgba(15, 118, 110, 0.28);
+  outline-offset: 2px;
+}
+
+.primary-button,
+.ghost-button,
+.action-buttons button {
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    opacity 160ms ease,
+    background 160ms ease;
+}
+
+.primary-button:hover,
+.ghost-button:hover,
+.action-buttons button:hover {
+  transform: translateY(-1px);
+}
+
+.primary-button {
+  padding: 13px 18px;
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+  color: #fff;
+  font-weight: 700;
+}
+
+.ghost-button {
+  padding: 10px 14px;
+  background: #ecf6f2;
+  color: #14532d;
+}
+
+.form-error {
+  margin: 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.chart-card {
+  border-radius: 22px;
+  padding: 18px;
+  background: #f8fcfa;
+  border: 1px solid #d7e6dd;
+}
+
+.chart-card h3 {
+  margin-bottom: 18px;
+  font-size: 1.15rem;
+}
+
+.legend-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.legend-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 10px;
+  color: #234338;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+}
+
+.list-panel {
+  min-height: 100%;
+}
+
+.transaction-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.transaction-row {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid #e2ece6;
+}
+
+.transaction-row:last-child {
+  border-bottom: none;
+}
+
+.transaction-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.pill.income,
+.money-in {
+  color: #0f766e;
+}
+
+.pill.expense,
+.money-out {
+  color: #c2410c;
+}
+
+.pill.income {
+  background: #dff7f3;
+}
+
+.pill.expense {
+  background: #ffe7d6;
+}
+
+.transaction-actions {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.action-buttons button {
+  padding: 8px 12px;
+  background: #eff6f3;
+  color: #234338;
+}
+
+.empty-panel {
+  display: grid;
+  align-content: start;
+}
+
+@media (max-width: 1080px) {
+  .summary-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .main-grid,
+  .hero-panel,
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .panel,
+  .hero-panel,
+  .summary-card {
+    border-radius: 22px;
+  }
+
+  .transaction-form,
+  .filters-grid,
+  .summary-grid,
+  .transaction-row {
+    grid-template-columns: 1fr;
+  }
+
+  .transaction-actions,
+  .section-heading {
+    justify-items: start;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}
