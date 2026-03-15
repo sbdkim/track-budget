@@ -132,9 +132,12 @@ function App() {
                     <h2>Loading charts</h2>
                   </div>
                 </div>
-                <p className="empty-copy">
-                  Preparing your charts and summaries for the current transaction view.
-                </p>
+                <div className="empty-state-card" role="status" aria-live="polite">
+                  <p className="empty-title">Preparing visual summaries</p>
+                  <p className="empty-copy">
+                    Loading charts and category insights for the current transaction view.
+                  </p>
+                </div>
               </section>
             }
           >

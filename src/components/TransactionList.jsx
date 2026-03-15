@@ -79,15 +79,21 @@ function TransactionList({
       </div>
 
       {!hasTransactions ? (
-        <p className="empty-copy">
-          Your transaction list will appear here after you add your first entry.
-        </p>
+        <div className="empty-state-card">
+          <p className="empty-title">No transactions yet</p>
+          <p className="empty-copy">
+            Your transaction history will appear here after you add the first entry.
+          </p>
+        </div>
       ) : null}
 
       {hasTransactions && transactions.length === 0 ? (
-        <p className="empty-copy">
-          No transactions match the current filters. Reset the filters to see all entries.
-        </p>
+        <div className="empty-state-card">
+          <p className="empty-title">No matching entries</p>
+          <p className="empty-copy">
+            No transactions match the current filters. Reset the filters to see all entries.
+          </p>
+        </div>
       ) : null}
 
       <div className="transaction-list">

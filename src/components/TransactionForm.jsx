@@ -155,7 +155,12 @@ function TransactionForm({
           />
         </label>
 
-        {error ? <p className="form-error">{error}</p> : null}
+        {error ? (
+          <div className="inline-feedback error" role="alert">
+            <p className="feedback-title">Check this entry</p>
+            <p className="form-error">{error}</p>
+          </div>
+        ) : null}
 
         <button className="primary-button full-width" type="submit">
           {editingTransaction ? 'Save changes' : 'Add transaction'}
